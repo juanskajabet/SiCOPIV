@@ -5,3 +5,45 @@
 .mainFxmlClass {
 
 }
+
+
+#borderPane {
+    -fx-background-color: #FAFCFC;
+}
+    
+#menuPane {
+  -fx-background-color: #013145;
+  
+}
+
+#hboxLogo {
+    -fx-background-color: #013145;
+}
+#split {
+    background-color:  #4890A3;
+}
+
+#opcionInicio {
+    -fx-background-color: #207091;
+    -fx-border-width: 0 0 0 4; -fx-border-color: white white white white;
+}
+
+.hbox-group:hover {
+        -fx-background-color: #DEAA0A;
+}
+
+.hyperlink {
+    -fx-underline: false;
+       -fx-text-fill: white;
+
+}
+
+.hyperlink:hover {
+-fx-text-fill: #DEAA0A;
+}
+
+.hbox-subgroup {
+        -fx-background-color: #044C68;
+    
+
+}

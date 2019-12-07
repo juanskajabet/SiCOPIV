@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -7,10 +11,181 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet dashboard.css?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1334.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemasicopiv.DashboardController">
    <left>
-      <Pane prefHeight="728.0" prefWidth="235.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+      <VBox fx:id="menuPane" prefHeight="745.0" prefWidth="220.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hboxLogo" prefHeight="86.0" prefWidth="227.0" />
+            <HBox fx:id="opcionInicio" alignment="CENTER" onMouseClicked="#abrirInicio" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <FontAwesomeIcon fill="#f8fffe" glyphName="HOME" size="1.8em" />
+                  <Label text="    Inicio" textFill="#f3fffe">
+                     <font>
+                        <Font name="Corbel Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></HBox>
+            <HBox fx:id="opcionVentas" alignment="CENTER" onMouseClicked="#abrirSubmenuVentas" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+               <children>
+                  <FontAwesomeIcon fill="#f8fffe" glyphName="DOLLAR" size="1.2em" />
+                  <Label text="   Ventas" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></HBox>
+            <HBox fx:id="subMenuVentas" alignment="CENTER" fillHeight="false" prefHeight="155.0" prefWidth="187.0" snapToPixel="false" styleClass="hbox-subgroup">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="opcionMateriales" alignment="CENTER" onMouseClicked="#abrirSubmenuMateriales" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="COGS" size="1.4em" text="" />
+                  <Label alignment="CENTER" prefHeight="22.0" prefWidth="86.0" text="Materiales" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="hbox-group" />
+                  <String fx:value="hbox-group" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="subMenuMateriales" alignment="CENTER" fillHeight="false" prefHeight="155.0" prefWidth="187.0" styleClass="hbox-subgroup">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="155.0" prefWidth="143.0">
+                     <children>
+                        <Hyperlink prefHeight="29.0" prefWidth="120.0" text="Registrar cliente" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="opcionModelos" alignment="CENTER" onMouseClicked="#abrirSubmenuModelos" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CONNECTDEVELOP" size="1.4em" />
+                  <Label text="   Modelos" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="subMenuModelos" alignment="CENTER" fillHeight="false" prefHeight="155.0" prefWidth="187.0" styleClass="hbox-subgroup">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="155.0" prefWidth="143.0">
+                     <children>
+                        <Hyperlink prefHeight="29.0" prefWidth="120.0" text="Registrar cliente" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="opcionClientes" alignment="CENTER" onMouseClicked="#abrirSubmenuClientes" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="1.4em" />
+                  <Label text="  Clientes" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="subMenuClientes" alignment="CENTER" fillHeight="false" prefHeight="155.0" prefWidth="187.0" styleClass="hbox-subgroup">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="155.0" prefWidth="143.0">
+                     <children>
+                        <Hyperlink prefHeight="29.0" prefWidth="120.0" text="Registrar cliente" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="opcionCuentas" alignment="CENTER" onMouseClicked="#abrirSubmenuCuentas" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="FILE_TEXT_ALT" size="1.4em" />
+                  <Label text="   Cuentas" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="subMenuCuentas" alignment="CENTER" fillHeight="false" prefHeight="155.0" prefWidth="187.0" styleClass="hbox-subgroup">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="155.0" prefWidth="143.0">
+                     <children>
+                        <Hyperlink prefHeight="29.0" prefWidth="120.0" text="Registrar cliente" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                        <Hyperlink text="Hyperlink" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </left>
+   <stylesheets>
+      <URL value="@dashboard.css" />
+   </stylesheets>
+   <top>
+      <MenuBar style="-fx-background-color: black; -fx-text-color-fill: white;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="647.0" prefWidth="1130.0" style="-fx-background-color: #EBF2F6;" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

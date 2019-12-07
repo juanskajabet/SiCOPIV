@@ -29,8 +29,10 @@ public class SistemaSiCOPIV extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
    //     Image icon = new Image(getClass().getResourceAsStream("/Imagenes/logo.png"));
      //   primaryStage.getIcons().add(icon);
-        primaryStage.setTitle("Implementación de una Tabla Hash - Proyecto del Primer Bimestre de Algoritmos");
+        primaryStage.setTitle("SiCOPIV - Servicauchos");
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("dashboard.css").toExternalForm());
+
         primaryStage.setScene(scene);
         primaryStage.show();
     }
