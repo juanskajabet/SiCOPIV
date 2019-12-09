@@ -174,7 +174,7 @@ public class DashboardController implements Initializable {
         quitarVisibilidad_SubMenuMateriales();
         quitarVisibilidad_SubMenuClientes();
         quitarVisibilidad_SubMenuCuentas();
-
+  
     }
 
     @FXML

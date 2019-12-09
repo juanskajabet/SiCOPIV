@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.*?>
 <?scenebuilder-stylesheet dashboard.css?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemasicopiv.DashboardController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemasicopiv.DashboardController">
    <left>
       <VBox fx:id="menuPane" prefHeight="745.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <children>
@@ -30,7 +30,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></HBox>
-            <HBox fx:id="opcionVentas" alignment="CENTER" onMouseClicked="#abrirSubmenuVentas" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+            <HBox fx:id="opcionVentas" alignment="CENTER" onMouseClicked="#abrirSubmenuVentas" prefHeight="50.0" prefWidth="200.0" styleClass="hbox-group">
                <children>
                   <FontAwesomeIcon fill="#f8fffe" glyphName="DOLLAR" size="1.2em" />
                   <Label text="   Ventas" textFill="WHITE">
@@ -54,7 +54,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox fx:id="opcionMateriales" alignment="CENTER" onMouseClicked="#abrirSubmenuMateriales" prefHeight="60.0" prefWidth="200.0">
+            <HBox fx:id="opcionMateriales" alignment="CENTER" onMouseClicked="#abrirSubmenuMateriales" prefHeight="50.0" prefWidth="200.0">
                <children>
                   <FontAwesomeIcon fill="WHITE" glyphName="COGS" size="1.4em" text="" />
                   <Label alignment="CENTER" prefHeight="22.0" prefWidth="86.0" text="Materiales" textFill="WHITE">
@@ -83,7 +83,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox fx:id="opcionModelos" alignment="CENTER" onMouseClicked="#abrirSubmenuModelos" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+            <HBox fx:id="opcionModelos" alignment="CENTER" onMouseClicked="#abrirSubmenuModelos" prefHeight="50.0" prefWidth="200.0" styleClass="hbox-group">
                <children>
                   <FontAwesomeIcon fill="WHITE" glyphName="CONNECTDEVELOP" size="1.4em" />
                   <Label text="   Modelos" textFill="WHITE">
@@ -108,7 +108,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox fx:id="opcionClientes" alignment="CENTER" onMouseClicked="#abrirSubmenuClientes" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+            <HBox fx:id="opcionClientes" alignment="CENTER" onMouseClicked="#abrirSubmenuClientes" prefHeight="50.0" prefWidth="200.0" styleClass="hbox-group">
                <children>
                   <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="1.4em" />
                   <Label text="  Clientes" textFill="WHITE">
@@ -133,7 +133,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox fx:id="opcionCuentas" alignment="CENTER" onMouseClicked="#abrirSubmenuCuentas" prefHeight="60.0" prefWidth="200.0" styleClass="hbox-group">
+            <HBox fx:id="opcionCuentas" alignment="CENTER" onMouseClicked="#abrirSubmenuCuentas" prefHeight="50.0" prefWidth="200.0" styleClass="hbox-group">
                <children>
                   <FontAwesomeIcon fill="WHITE" glyphName="FILE_TEXT_ALT" size="1.4em" />
                   <Label text="   Cuentas" textFill="WHITE">
@@ -186,6 +186,49 @@
       </MenuBar>
    </top>
    <center>
-      <Pane prefHeight="647.0" prefWidth="1130.0" style="-fx-background-color: #EBF2F6;" BorderPane.alignment="CENTER" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <BorderPane prefHeight="51.0" prefWidth="1260.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <BorderPane fx:id="borderClientes" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ECEFF0;" BorderPane.alignment="CENTER">
+               <center>
+                  <TabPane fx:id="TabPaneClientes" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                      <Tab>
+                           <graphic>
+                              <Label text="    Datos Basicos    ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Corbel" size="17.0" />
+                                 </font></Label>
+                           </graphic>
+                           <content>
+                              <BorderPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2e4b65;" BorderPane.alignment="CENTER" />
+                                 </center>
+                              </BorderPane>
+                           </content>
+                        </Tab>
+                        <Tab>
+                           <graphic>
+                              <Label text="    Datos Comerciales    ">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Corbel" size="17.0" />
+                                 </font></Label>
+                           </graphic>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
    </center>
 </BorderPane>

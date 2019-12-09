@@ -47,3 +47,38 @@
     
 
 }
+
+.tab {
+    -fx-background-color: #2e4b65;
+    
+    -fx-background-radius: 0;
+}
+
+.tab .label{
+           -fx-text-fill: white;
+}
+
+.tab:hover {
+    -fx-background-color: #207091;
+}
+
+.tab:selected {
+    -fx-background-color: #032637;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-width: 3 0 0 0;
+    -fx-border-color: #D7B407;
+    -fx-border-insets: 0;
+}
+
+.tab:focused {
+    -fx-focus-color: transparent;
+}
+
+.tab:selected .focus-indicator {
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: white;
+}
